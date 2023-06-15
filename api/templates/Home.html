@@ -1,1 +1,132 @@
 
+<!DOCTYPE html>
+<html>
+    <title>I Love You</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='fav.png') }}">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+#vid{
+    width: 100%;
+    display: inline-flex;
+}
+video{
+    width: 100%;
+    height: 500px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  #vid{
+    display: block;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>I Love You Mister Taco <3 </h1>
+  <p>Youre far but i want you to feel love sorry its not much, please dont share the link to others.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="{{ url_for('static', filename='1.jpg') }}" >
+    <img src="{{ url_for('static', filename='2.jpg') }}" >
+    <img src="{{ url_for('static', filename='3.jpg') }}" >
+    <img src="{{ url_for('static', filename='4.jpg') }}" >
+    <img src="{{ url_for('static', filename='25.jpg') }}" >
+    <!-- <img src="{{ url_for('static', filename='7.jpg') }}" > -->
+    <img src="{{ url_for('static', filename='8.jpg') }}" >
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='9.jpg') }}" >
+    <img src="{{ url_for('static', filename='10.jpg') }}" >
+    <img src="{{ url_for('static', filename='11.jpg') }}" >
+    <img src="{{ url_for('static', filename='12.jpg') }}" >
+    <img src="{{ url_for('static', filename='13.jpg') }}" >
+    <img src="{{ url_for('static', filename='14.jpg') }}" >
+  </div>  
+  <div class="column">
+    <img src="{{ url_for('static', filename='15.jpg') }}" >
+    <img src="{{ url_for('static', filename='16.jpg') }}" >
+    <img src="{{ url_for('static', filename='17.jpg') }}" >
+    <img src="{{ url_for('static', filename='18.jpg') }}" >
+    <img src="{{ url_for('static', filename='19.jpg') }}" >
+    <img src="{{ url_for('static', filename='20.jpg') }}" >
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='21.jpg') }}" >
+    <img src="{{ url_for('static', filename='22.jpg') }}" >
+    <img src="{{ url_for('static', filename='23.jpg') }}" >
+    <img src="{{ url_for('static', filename='24.jpg') }}" >
+    <img src="{{ url_for('static', filename='25.jpg') }}" >
+    <img src="{{ url_for('static', filename='26.jpg') }}" >
+  </div>
+</div>
+
+<div>
+    <h1 style="text-align: center;">Sorry this is the only video i find :(</h1>
+</div>
+
+<div id="vid">   
+<video  controls>
+    <source src="{{ url_for('static', filename='vid1.mp4') }}" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="{{ url_for('static', filename='vid2.mp4') }}" type="video/mp4">
+  </video>
+</div>
+</body>
+</html>
